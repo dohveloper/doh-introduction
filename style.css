@@ -1,0 +1,187 @@
+@font-face {
+    font-family: 'Gmarket Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Gmarket Sans Bold'), local('GmarketSans-Bold'),
+        url('http://script.ebay.co.kr/fonts/GmarketSansBold.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('http://script.ebay.co.kr/fonts/GmarketSansBold.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+@font-face {
+    font-family: 'Gmarket Sans';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Gmarket Sans Medium'), local('GmarketSans-Medium'),
+        url('http://script.ebay.co.kr/fonts/GmarketSansMedium.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('http://script.ebay.co.kr/fonts/GmarketSansMedium.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+@font-face {
+    font-family: 'Gmarket Sans';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Gmarket Sans Light'), local('GmarketSans-Light'),
+        url('http://script.ebay.co.kr/fonts/GmarketSansLight.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('http://script.ebay.co.kr/fonts/GmarketSansLight.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Gmarket Sans', sans-serif;
+    scroll-snap-type: y mandatory;
+}
+
+.test-border {
+    border: 1px solid blue;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.SiteContainer {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.SiteHeader {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 24px;
+}
+
+
+.SiteHeader__logo {
+    padding: 32px 16px;
+
+}
+
+.SiteHeaderNav__list {
+    display: flex;
+}
+
+.SiteHeaderNavItem {
+    padding: 32px 24px;
+
+}
+
+.SiteHeaderNavItem>a {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.24);
+    font-size: 16px;
+}
+
+.SiteSection {
+    height: 100vh;
+    scroll-snap-align: start;
+}
+
+
+
+.Hero {
+    background: #EAEAEA;
+}
+
+.HeroContent {
+    display: flex;
+    justify-content: space-between;
+    height: calc(100vh - 110px);
+}
+
+.HeroImageSection {
+    flex: 1;
+    height: 100%;
+}
+
+.HeroImageMonitor {
+    position: relative;
+    height: 100%;
+}
+
+.HeroImageMonitor__frame {
+    width: 300px;
+    z-index: 2;
+    position: absolute;
+    top: 15%;
+}
+
+.HeroImageMonitor__content {
+    position: absolute;
+    width: 240px;
+    z-index: 1;
+    top: 20%;
+    left: 12%;
+}
+
+.HeroImageMonitorText {
+    position: absolute;
+    width: 300px;
+    height: 50px;
+    bottom: 16%;
+    left: 120%;
+}
+
+.HeroTextSection {
+    flex: 2;
+    margin-left: 80px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.HeroText__headline {
+    font-size: 3.815rem;
+}
+
+.HeroText__hi {
+    color: rgba(0, 0, 0, 0.32);
+    margin-bottom: 16px;
+}
+
+.HeroText__description {
+    margin-top: 32px;
+    font-size: 1.563rem;
+    color: rgba(0, 0, 0, 0.72);
+    margin-bottom: 80px;
+}
+
+
+/*  */
+.about {
+    background-color: aliceblue;
+}
+
+.programming {
+    background-color: antiquewhite;
+}
+
+.swtrack {
+    background-color: aqua;
+}
+
+.contact {
+    background-color: blueviolet;
+}
+
+.temp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 48px;
+}
