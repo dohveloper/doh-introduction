@@ -1,9 +1,11 @@
 :root {
+
     --color-black-100: rgba(0, 0, 0, 0.16);
     --color-black-200: rgba(0, 0, 0, 0.24);
     --color-black-300: rgba(0, 0, 0, 0.32);
-    --color-black-400: rgba(0, 0, 0, 0.72);
-    --color-black-500: black;
+    --color-black-400: rgba(0, 0, 0, 0.58);
+    --color-black-500: rgba(0, 0, 0, 0.72);
+    --color-black-600: black;
 
     --font-size-s: 1rem;
     --font-size-m: 1.563rem;
@@ -79,6 +81,7 @@ a {
 
 .SiteHeader__logo {
     padding: 32px 16px;
+    font-size: 24px;
 
 }
 
@@ -93,8 +96,9 @@ a {
 
 .SiteHeaderNavItem>a {
     font-family: 'Inter', sans-serif;
-    font-weight: 600;
-    color: var(--color-black-100);
+    font-weight: 500;
+    color: var(--color-black-300);
+    letter-spacing: 1px;
     font-size: 16px;
 }
 
@@ -144,28 +148,26 @@ a {
 }
 
 .HeroImageSection {
-    flex: 1;
+    flex: 8;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .HeroImageMonitor {
-    position: relative;
-    height: 100%;
+    margin-left: -120px;
 }
 
 .HeroImageMonitor__frame {
-    width: 300px;
+    width: 480px;
     z-index: 2;
-    position: absolute;
-    top: 15%;
 }
 
 .HeroImageMonitor__content {
-    position: absolute;
     width: 240px;
     z-index: 1;
-    top: 20%;
-    left: 12%;
+    display: none;
 }
 
 .HeroImageMonitorText {
@@ -177,13 +179,12 @@ a {
 }
 
 .HeroTextSection {
-    flex: 2;
+    flex: 7;
     margin-left: 80px;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-
 }
 
 .HeroText__headline {
@@ -191,14 +192,15 @@ a {
 }
 
 .HeroText__hi {
-    color: var(--color-black-200);
+    color: var(--color-black-300);
     margin-bottom: 16px;
 }
 
 .HeroText__description {
     margin-top: 32px;
     font-size: var(--font-size-m);
-    color: var(--color-black-300);
+    font-weight: 400;
+    color: var(--color-black-600);
     margin-bottom: 80px;
 }
 
@@ -309,21 +311,9 @@ a {
 .ProgrammingInterestItem__label {
     margin: 24px 0;
     font-weight: 400;
-    color: var(--color-black-500);
+    color: var(--color-black-600);
 }
 
-
-.contact {
-    background-color: blueviolet;
-}
-
-.temp {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    font-size: 48px;
-}
 
 /* Swtrack Section */
 .Swtrack {
@@ -376,6 +366,7 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: #EAEAEA;
 }
 
 .ContactHeader {
@@ -385,7 +376,8 @@ a {
 
 .Contact__email {
     margin-top: 40px;
-    font-size: var(--font-size-m);
+    font-size: var(--font-size-s);
     font-weight: 400;
-    color: var(--color-black-300)
+    color: var(--color-black-300);
+    margin-left: -60px;
 }
