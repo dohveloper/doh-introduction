@@ -18,9 +18,8 @@ setInterval(() => {
     if (count > 1) {
         count = 0;
     }
- }, 2020);
+ }, 2000);
   
-
 
 function loadMonitorScreen(nthImage) {
     const SCREEN_WIDTH = 226; 
