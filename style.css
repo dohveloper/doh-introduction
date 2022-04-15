@@ -325,7 +325,7 @@ a {
     font-size: 48px;
 }
 
-/* Swtrack */
+/* Swtrack Section */
 .Swtrack {
     display: flex;
     align-items: center;
@@ -368,4 +368,24 @@ a {
 
 .SwtrackTextItem {
     margin-bottom: 40px;
+}
+
+/* Contact Section */
+.Contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.ContactHeader {
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+}
+
+.Contact__email {
+    margin-top: 40px;
+    font-size: var(--font-size-m);
+    font-weight: 400;
+    color: var(--color-black-300)
 }
