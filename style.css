@@ -161,10 +161,39 @@ a {
 }
 
 
-/*  */
-.about {
-    background-color: aliceblue;
+/* About Section */
+.About {
+    background-color: #F5F5F5;
 }
+
+.AboutTitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 2.441rem;
+}
+
+.AboutContent {
+    position: relative;
+    height: 100%;
+    top: -100vh;
+}
+
+.AboutContent__list {
+    height: 100%;
+}
+
+.AboutContentListItem {
+    position: relative;
+    top: 20%;
+    left: 100px;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+
+
 
 .programming {
     background-color: antiquewhite;
