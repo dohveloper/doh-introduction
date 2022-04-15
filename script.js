@@ -1,42 +1,62 @@
  window.addEventListener("load", function(event) {
+    
      console.log("All resources finished loading!");
-     loadMonitorScreen();
+     loadMonitorScreen(0);
  });
-  window.addEventListener("resize", function(event) {
+
+window.addEventListener("resize", function(event) {
       console.log("All resources finished loading!");
-      clearMonitorScreen()
-      loadMonitorScreen();
- });
+     clearMonitorScreen();
+      loadMonitorScreen(0);
+});
+ 
+let count = 0;
+setInterval(() => {
+    clearMonitorScreen();
+    loadMonitorScreen(count);
+    count++;
+    if (count > 1) {
+        count = 0;
+    }
+ }, 2000);
   
 
 
-
-
-function clearMonitorScreen() {
-    let screen_img = document.querySelector(".HeroImageMonitor__content1");
-    screen_img.parentElement.removeChild(screen_img);
-
-    let blank_screen_img = document.querySelector(".HeroImageMonitor__blankScreen");
-    blank_screen_img.parentElement.removeChild(blank_screen_img);
-}
-
-function loadMonitorScreen() {
+function loadMonitorScreen(nthImage) {
     const SCREEN_WIDTH = 226; 
     const SCREEN_HEIGHT = 174;
-    const BLANK_SCREEN_WIDTH = 239;  
-    const BLANK_SCREEN_HEIGHT = 178;  
-    const BLANK_SCREEN_OFFSET_X = -10;  
-    const BLANK_SCREEN_OFFSET_Y = 10;  
+    const BLANK_SCREEN_WIDTH = 228;  
+    const BLANK_SCREEN_HEIGHT = 188;  
+    const BLANK_SCREEN_OFFSET_X = -2;  
+    const BLANK_SCREEN_OFFSET_Y = -2;  
 
     // Get a screen position;
     let pos = getScreenPosition();
     
-   
+
+
+
+    //add monitor frame 
+    const monitorEl = document.querySelector(".HeroImageMonitor__frame");
+    let monitor_frame = document.createElement("img");
+    monitor_frame.className = "frameHa";
+    monitor_frame.src = "img/monitor_blank0" + ".png";
+    monitor_frame.style.zIndex = 5;
+    monitor_frame.style.width = window.getComputedStyle(monitorEl).width;
+    monitor_frame.style.transform = "rotate(359.6deg)";
+    // /* Get a position of a monitor image */ 
     
+    let monitor = monitorEl.getBoundingClientRect();
+    console.log(monitor.left, monitor.top);
+    let x = parseFloat(monitor.left) + window.scrollX+2.4;
+    let y = parseFloat(monitor.top) + window.scrollY+2;
+    placeElement(monitor_frame, x, y);
+    
+
     //add screen content element
     let screen = document.createElement("img");
-    screen.className = "HeroImageMonitor__content1"
-    screen.src = "img/screen/"+"monitor2"+".png";
+    screen.className = "HeroImageMonitor__content"
+    screen.src = "img/screen/"+`screen_${nthImage}`+".png";
     screen.style.width = SCREEN_WIDTH + "px";
     screen.style.height = SCREEN_HEIGHT + "px";
     screen.style.zIndex = 3;
@@ -51,23 +71,26 @@ function loadMonitorScreen() {
     blank_screen.style.height = BLANK_SCREEN_HEIGHT + "px";
     blank_screen.style.opacity = "0.3";
     blank_screen.style.zIndex = 4;
+    blank_screen.style.transform = "rotate(359deg)";
     placeElement(blank_screen, pos.x + BLANK_SCREEN_OFFSET_X, pos.y + BLANK_SCREEN_OFFSET_Y);
     
-
     
 }
 
+function clearMonitorScreen() {
+    //clear screen img
+    let screen_img = document.querySelector(".HeroImageMonitor__content");
+    screen_img.parentElement.removeChild(screen_img);
+    
+    //clear blank screen img
+    let blank_screen_img = document.querySelector(".HeroImageMonitor__blankScreen");
+    blank_screen_img.parentElement.removeChild(blank_screen_img);
 
-//change screen-content element 
+    //clear monitor frame img
+    let monitor_frame_img = document.querySelector(".frameHa");
+    monitor_frame_img.parentElement.removeChild(monitor_frame_img);
 
-
-
-
-
-/* Add an Element to a document*/
-//create
-
-//add
+}
 
 function placeElement(el, x_pos, y_pos) {
   el.style.position = "absolute";
@@ -76,33 +99,19 @@ function placeElement(el, x_pos, y_pos) {
   document.querySelector(".HeroImageMonitor").appendChild(el);
 }
 
-
-
-
-
-
-/*Things to do*/
-//get a monitor position
-//add screen-content elements
-//apply an automatic sliding feature
-
-
 function getScreenPosition() {
-
     const SCREEN_OFFSET_X = 177;
     const SCREEN_OFFSET_Y = 92; 
+
     /* Get a position of a monitor image */ 
     const monitorEl = document.querySelector(".HeroImageMonitor__frame");
     let monitor = monitorEl.getBoundingClientRect();
 
     /* Adjust a position to screen */
-    let x = parseInt(monitor.left)+ window.scrollX + SCREEN_OFFSET_X;
-    let y = parseInt(monitor.top) + window.scrollY + SCREEN_OFFSET_Y;
+    let x = parseFloat(monitor.left)+ window.scrollX + SCREEN_OFFSET_X;
+    let y = parseFloat(monitor.top) + window.scrollY + SCREEN_OFFSET_Y;    
     
     let pos = { x: x, y: y };
-
     return pos;
 };
 
-const slideContent = ()=>{
-}
