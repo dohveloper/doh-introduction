@@ -103,6 +103,34 @@ a {
     scroll-snap-align: start;
 }
 
+.SiteSection__header {
+    font-size: var(--font-size-l);
+    padding: 0 0 56px 0;
+}
+
+.SiteSection__header--grey {
+    color: var(--color-black-200);
+}
+
+.SiteSection__label {
+    margin-bottom: 24px;
+    font-weight: 600;
+    font-size: var(--font-size-m);
+
+}
+
+.SiteSection__text {
+    font-size: var(--font-size-s);
+    line-height: calc(var(--font-size-s) * 2);
+    /*adjust line-height difference */
+    margin-top: -4px;
+}
+
+
+
+
+
+
 
 
 .Hero {
@@ -217,35 +245,24 @@ a {
 }
 
 
-.ProgrammingHeader {
-    padding: 0 0 56px 0;
-    font-size: var(--font-size-l);
-
-}
 
 .SiteLayoutA {
     display: flex;
     margin-top: 64px;
 }
 
-.SiteLayoutA__item1 {
+.SiteLayoutA__column1 {
     flex: 3;
     font-weight: 600;
     font-size: var(--font-size-m);
 
 }
 
-.SiteLayoutA__item2 {
+.SiteLayoutA__column2 {
     flex: 6;
 
 }
 
-.SiteLayoutA__item--text {
-    font-size: var(--font-size-s);
-    line-height: calc(var(--font-size-s) * 2);
-    /*adjust line-height difference */
-    margin-top: -4px;
-}
 
 .ProgrammingHeader__about {
     color: var(--color-black-200);
@@ -280,25 +297,21 @@ a {
 .ProgrammingInterestItem__images {
     margin: 0 auto;
     text-align: center;
-    ;
 }
 
 .ProgrammingInterestItem__image {
     width: 64px;
     height: 64px;
-
+    object-fit: scale-down;
+    padding: 4px;
 }
 
 .ProgrammingInterestItem__label {
-
     margin: 24px 0;
     font-weight: 400;
     color: var(--color-black-500);
 }
 
-.swtrack {
-    background-color: aqua;
-}
 
 .contact {
     background-color: blueviolet;
@@ -310,4 +323,49 @@ a {
     justify-content: center;
     font-weight: bold;
     font-size: 48px;
+}
+
+/* Swtrack */
+.Swtrack {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+}
+
+.SwtrackHeader {
+    font-size: var(--font-size-l);
+    padding: 0 0 64px 0;
+
+}
+
+.SwtrackHeader__about {
+    display: inline-block;
+    margin-bottom: 16px;
+}
+
+.SwtrackImage {
+    width: 200px;
+    margin: -20px;
+    /* image adjustment */
+}
+
+.SwtrackContent {
+    display: flex;
+
+}
+
+.SwtrackImageSection {
+    flex: 1;
+}
+
+.SwtrackTextSection {
+    flex: 3;
+    margin-left: 80px;
+    margin-top: 24px;
+}
+
+.SwtrackTextItem {
+    margin-bottom: 40px;
 }
