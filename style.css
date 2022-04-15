@@ -161,13 +161,15 @@ a {
 
 .HeroImageMonitor__frame {
     width: 480px;
-    z-index: 2;
+    z-index: 1;
+    position: relative;
+    transform: rotate(359.6deg);
+
 }
 
 .HeroImageMonitor__content {
     width: 240px;
-    z-index: 1;
-    display: none;
+    z-index: 2;
 }
 
 .HeroImageMonitorText {
