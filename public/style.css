@@ -264,8 +264,53 @@
      left: 100px;
      font-size: var(--font-size-l);
      font-weight: 700;
-     color: var(--color-black-100)
+     color: var(--color-black-100);
+
  }
+
+ .updown {
+     animation: updown 4s infinite ease-in-out;
+ }
+
+ .updown-1 {
+     animation: updown 1.6s infinite ease-in-out;
+ }
+
+ .updown-2 {
+     animation: updown 2s infinite ease-in-out;
+ }
+
+ .updown-3 {
+     animation: updown 2.4s infinite ease-in-out;
+ }
+
+ .updown-4 {
+     animation: updown 2.8s infinite ease-in-out;
+ }
+
+ .updown-5 {
+     animation: updown 3.2s infinite ease-in-out;
+
+ }
+
+ @keyframes updown {
+
+     0% {
+         transform: translateY(-8px);
+
+     }
+
+     50% {
+         transform: translateY(8px);
+
+     }
+
+     100% {
+         transform: translateY(-8px);
+
+     }
+ }
+
 
  .AboutContentListItem.item1 {
      left: 10%;
@@ -551,3 +596,6 @@
 
 
  }
+
+
+ /* Scroll Animation */
