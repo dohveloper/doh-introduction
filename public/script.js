@@ -1,4 +1,6 @@
- window.addEventListener("load", function(event) {
+const SCREEN_IMAGE_COUNT = 2;
+
+window.addEventListener("load", function (event) {
     
      console.log("All resources finished loading!");
      loadMonitorScreen(0);
@@ -6,28 +8,31 @@
 
 window.addEventListener("resize", function(event) {
       console.log("All resources finished loading!");
-     clearMonitorScreen();
+      clearMonitorScreen();
       loadMonitorScreen(0);
 });
  
 // Change Monitor Screen 
+
 let count = 0;
 setInterval(() => {
     clearMonitorScreen();
     loadMonitorScreen(count);
     count++;
-    if (count > 1) {
+    if (count > SCREEN_IMAGE_COUNT-1) {
         count = 0;
     }
  }, 2000);
-  
+
 
 function loadMonitorScreen(nthImage) {
-    const SCREEN_WIDTH = 224; 
-    const SCREEN_HEIGHT = 174;
+    const SCREEN_WIDTH = 240; 
+    const SCREEN_HEIGHT = 190;
+    const SCREEN_OFFSET_X = -10;
+    const SCREEN_OFFSET_Y = -10;
     const BLANK_SCREEN_WIDTH = 228;  
     const BLANK_SCREEN_HEIGHT = 188;  
-    const BLANK_SCREEN_OFFSET_X = -2;  
+    const BLANK_SCREEN_OFFSET_X = -4;  
     const BLANK_SCREEN_OFFSET_Y = -2;  
 
     // Get a screen position;
@@ -36,14 +41,14 @@ function loadMonitorScreen(nthImage) {
 
 
 
-    //add monitor frame 
+    //Add monitor frame 
     const monitorEl = document.querySelector(".HeroImageMonitor__frame");
     let monitor_frame = document.createElement("img");
     monitor_frame.className = "frameHa";
     monitor_frame.src = "img/monitor_blank" + ".png";
     monitor_frame.style.zIndex = 5;
     monitor_frame.style.width = window.getComputedStyle(monitorEl).width;
-    // /* Get a position of a monitor image */
+    // get a position of a monitor image 
     let monitor = monitorEl.getBoundingClientRect();
     let x = parseFloat(monitor.left) + window.scrollX;
     let y = parseFloat(monitor.top) + window.scrollY;
@@ -52,9 +57,8 @@ function loadMonitorScreen(nthImage) {
     placeElement(monitor_frame,x, y);
     
 
-    //add screen content element
+    //Add screen content element
     if (document.querySelector(".frameHa")) {
-        
         let screen = document.createElement("img");
         screen.className = "HeroImageMonitor__content"
         screen.src = "img/screen/"+`screen_${nthImage}`+".png";
@@ -62,7 +66,8 @@ function loadMonitorScreen(nthImage) {
         screen.style.height = SCREEN_HEIGHT + "px";
         screen.style.zIndex = 3;
         screen.style.borderRadius = "16px";
-            placeElement(screen, pos.x, pos.y);
+
+        placeElement(screen, pos.x +SCREEN_OFFSET_X, pos.y+SCREEN_OFFSET_Y);
     
     
         //add screen cover(transparent blank screen) element
@@ -115,4 +120,7 @@ function getScreenPosition() {
     let pos = { x: x, y: y };
     return pos;
 };
+
+
+
 

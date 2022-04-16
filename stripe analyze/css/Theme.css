@@ -1,0 +1,674 @@
+.theme--White {
+    --backgroundColor: #fff;
+    --linkColor: var(--accentColor);
+    --linkHoverColor: #0a2540;
+    --buttonColor: var(--accentColor);
+    --buttonHoverColor: #0a2540;
+    --buttonDisabledColor: #cfd7df;
+    --buttonDisabledOpacity: 0.7;
+    --knockoutColor: #fff;
+    --knockoutDisabledColor: #8898aa;
+    --guideSolidColor: rgba(66, 71, 112, 0.06);
+    --guideDashedColor: rgba(66, 71, 112, 0.09);
+    --titleColor: #0a2540;
+    --textColor: #425466;
+    --inputBackground: #f1f4f7;
+    --inputPlaceholderColor: #acb9c5;
+    --inputTextColor: #0a2540;
+    --inputErrorAccentColor: #ff5191;
+    --annotationColor: #8c9eb1;
+    --maskFadeColor: rgba(0, 0, 0, 0.4);
+    --navColor: #0a2540;
+    --navHoverColor: #0a2540;
+    --navHoverOpacity: 0.6;
+    --footerColor: #0a2540;
+    --cardBorderColor: #cbd6e0;
+    --cardBackground: #fff;
+    --subcardBackground: #f6f9fc;
+    --gridSubcardBackground: #f6f9fc;
+    --tableIconColor: #8c9eb1;
+    --stripeAccentWhite: #fff;
+    --stripeAccentLight: #e3e7ec;
+    --stripeAccentDark: #0a2540;
+    --bulletColor: #cfd7df;
+    --footnoteTextColor: #4d5b78;
+    --disclaimerTextColor: #707f98;
+    --inlineCodeTextColor: #2c3a57;
+    --inlineCodeBackground: #e6ecf2
+}
+
+.theme--White.accent--Slate {
+    --accentColor: #0a2540;
+    --linkHoverOpacity: 0.6;
+    --buttonHoverOpacity: 0.6
+}
+
+.theme--Light {
+    --backgroundColor: #f6f9fc;
+    --linkColor: var(--accentColor);
+    --linkHoverColor: #0a2540;
+    --buttonColor: var(--accentColor);
+    --buttonHoverColor: #0a2540;
+    --buttonDisabledColor: #cfd7df;
+    --buttonDisabledOpacity: 0.7;
+    --knockoutColor: #fff;
+    --knockoutDisabledColor: #8898aa;
+    --guideSolidColor: rgba(66, 71, 112, 0.06);
+    --guideDashedColor: rgba(66, 71, 112, 0.09);
+    --titleColor: #0a2540;
+    --textColor: #425466;
+    --inputBackground: #e6ebf1;
+    --inputPlaceholderColor: #8898aa;
+    --inputTextColor: #0a2540;
+    --inputErrorAccentColor: #ff5191;
+    --annotationColor: #8c9eb1;
+    --maskFadeColor: rgba(0, 0, 0, 0.4);
+    --navColor: #0a2540;
+    --navHoverColor: #0a2540;
+    --navHoverOpacity: 0.6;
+    --footerColor: #0a2540;
+    --cardBorderColor: #cbd6e0;
+    --cardBackground: #fff;
+    --subcardBackground: #f6f9fc;
+    --gridSubcardBackground: #fff;
+    --tableIconColor: #8c9eb1;
+    --stripeAccentWhite: #fff;
+    --stripeAccentLight: #e3e7ec;
+    --stripeAccentDark: #0a2540;
+    --bulletColor: #cfd7df;
+    --footnoteTextColor: #4d5b78;
+    --disclaimerTextColor: #707f98;
+    --inlineCodeTextColor: #2c3a57;
+    --inlineCodeBackground: #dce6ee
+}
+
+.theme--Light.accent--Slate {
+    --accentColor: #0a2540;
+    --linkHoverOpacity: 0.6;
+    --buttonHoverOpacity: 0.6
+}
+
+.theme--Dark {
+    --backgroundColor: #0a2540;
+    --linkColor: var(--accentColor);
+    --linkHoverColor: #fff;
+    --linkHoverOpacity: 1;
+    --buttonColor: var(--accentColor);
+    --buttonHoverColor: #fff;
+    --buttonDisabledColor: #6b7c93;
+    --buttonHoverOpacity: 1;
+    --buttonDisabledOpacity: 0.7;
+    --knockoutColor: #0a2540;
+    --knockoutDisabledColor: #e6ebf1;
+    --guideSolidColor: rgba(66, 71, 112, 0.3);
+    --guideDashedColor: rgba(66, 71, 112, 0.3);
+    --titleColor: #fff;
+    --textColor: #adbdcc;
+    --inputBackground: #0c2e4e;
+    --inputBackgroundAlt: #274869;
+    --inputPlaceholderColor: #b6c2cd;
+    --inputTextColor: #fff;
+    --inputErrorAccentColor: #ff5191;
+    --annotationColor: #8c9eb1;
+    --maskFadeColor: rgba(0, 0, 0, 0.4);
+    --navColor: #fff;
+    --navHoverColor: #fff;
+    --navHoverOpacity: 0.6;
+    --footerColor: #fff;
+    --cardBorderColor: #0f395e;
+    --cardBackground: #0c2e4e;
+    --subcardBackground: #1f4468;
+    --gridSubcardBackground: #1f4468;
+    --tableIconColor: #8c9eb1;
+    --stripeAccentWhite: #fff;
+    --stripeAccentLight: #fff;
+    --stripeAccentDark: #0c2e4e;
+    --bulletColor: #6b7c93;
+    --footnoteTextColor: #adbdcc;
+    --disclaimerTextColor: #707f98;
+    --inlineCodeTextColor: #fff;
+    --inlineCodeBackground: #1c4161
+}
+
+.theme--Dark.accent--Slate {
+    --accentColor: #fff
+}
+
+.theme--Transparent {
+    --backgroundColor: none;
+    --linkColor: #fff;
+    --linkHoverColor: var(--linkColor);
+    --linkHoverOpacity: 0.6;
+    --buttonColor: hsla(0, 0%, 100%, 0.2);
+    --buttonHoverColor: hsla(0, 0%, 100%, 0.4);
+    --accentColor: #fff;
+    --knockoutColor: #fff;
+    --textColor: #fff;
+    --guideSolidColor: rgba(66, 71, 112, 0.06);
+    --guideDashedColor: rgba(66, 71, 112, 0.09);
+    --titleColor: #fff;
+    --maskFadeColor: rgba(0, 0, 0, 0.4);
+    --navColor: #fff;
+    --navHoverColor: #fff;
+    --navHoverOpacity: 0.6;
+    --stripeBackground: #fff
+}
+
+.theme--LegacyDark,
+.theme--LegacyLight {
+    --fontFamily: Camphor, "Open Sans", "Segoe UI", sans-serif;
+    --ctaFont: var(--fontWeightSemibold) 15px/1.6 var(--fontFamily);
+    --fontWeightBold: 600;
+    --fontWeightSemibold: 600;
+    --fontWeightNormal: 500
+}
+
+.theme--LegacyDark .ProductIcon--Atlas,
+.theme--LegacyLight .ProductIcon--Atlas {
+    --iconHoverLightColor: #fcd669;
+    --iconHoverDarkColor: #ce7c3a
+}
+
+.theme--LegacyDark .ProductIcon--Billing,
+.theme--LegacyLight .ProductIcon--Billing {
+    --iconHoverLightColor: #74e4a2;
+    --iconHoverDarkColor: #159570
+}
+
+.theme--LegacyDark .ProductIcon--Connect,
+.theme--LegacyDark .ProductIcon--Payouts,
+.theme--LegacyLight .ProductIcon--Connect,
+.theme--LegacyLight .ProductIcon--Payouts {
+    --iconHoverLightColor: #68d4f8;
+    --iconHoverDarkColor: #217ab7
+}
+
+.theme--LegacyDark .ProductIcon--Capital,
+.theme--LegacyDark .ProductIcon--CorporateCard,
+.theme--LegacyDark .ProductIcon--Issuing,
+.theme--LegacyDark .ProductIcon--Payments,
+.theme--LegacyDark .ProductIcon--Terminal,
+.theme--LegacyLight .ProductIcon--Capital,
+.theme--LegacyLight .ProductIcon--CorporateCard,
+.theme--LegacyLight .ProductIcon--Issuing,
+.theme--LegacyLight .ProductIcon--Payments,
+.theme--LegacyLight .ProductIcon--Terminal {
+    --iconHoverLightColor: #87bbfd;
+    --iconHoverDarkColor: #555abf
+}
+
+.theme--LegacyDark .ProductIcon--Radar,
+.theme--LegacyLight .ProductIcon--Radar {
+    --iconHoverLightColor: #f6a4eb;
+    --iconHoverDarkColor: #9251ac
+}
+
+.theme--LegacyDark .ProductIcon--Sigma,
+.theme--LegacyLight .ProductIcon--Sigma {
+    --iconHoverLightColor: #beb0f4;
+    --iconHoverDarkColor: #7356b6
+}
+
+.theme--LegacyLight {
+    --backgroundColor: #f6f9fc;
+    --linkColor: var(--accentColor);
+    --linkHoverColor: #0a2540;
+    --buttonColor: none;
+    --buttonHoverColor: none;
+    --buttonDisabledColor: none;
+    --knockoutColor: #32325d;
+    --knockoutDisabledColor: #8898aa;
+    --guideSolidColor: rgba(66, 71, 112, 0.06);
+    --guideDashedColor: rgba(66, 71, 112, 0.09);
+    --titleColor: #0a2540;
+    --textColor: #425466;
+    --inputBackground: #fff;
+    --inputPlaceholderColor: #acb9c5;
+    --annotationColor: #8c9eb1;
+    --maskFadeColor: rgba(0, 0, 0, 0.4);
+    --navColor: #32325d;
+    --navHoverColor: #32325d;
+    --navHoverOpacity: 0.6;
+    --footerColor: #0a2540;
+    --cardBorderColor: #cbd6e0;
+    --cardBackground: #fff;
+    --subcardBackground: #f6f9fc;
+    --stripeBackground: #0a2540
+}
+
+.theme--LegacyLight.accent--Slate {
+    --accentColor: #0a2540;
+    --linkHoverOpacity: 0.6;
+    --buttonHoverOpacity: 0.6
+}
+
+.theme--LegacyDark {
+    --backgroundColor: #0a2540;
+    --linkColor: var(--accentColor);
+    --linkHoverColor: #fff;
+    --linkHoverOpacity: 1;
+    --buttonColor: none;
+    --buttonHoverColor: none;
+    --buttonDisabledColor: none;
+    --buttonHoverOpacity: 0.6;
+    --knockoutColor: #fff;
+    --knockoutDisabledColor: #e6ebf1;
+    --guideSolidColor: rgba(66, 71, 112, 0.3);
+    --guideDashedColor: rgba(66, 71, 112, 0.3);
+    --titleColor: #fff;
+    --textColor: #adbdcc;
+    --inputBackground: #0c2e4e;
+    --inputPlaceholderColor: #b6c2cd;
+    --annotationColor: #8c9eb1;
+    --maskFadeColor: rgba(0, 0, 0, 0.4);
+    --navColor: #fff;
+    --navHoverColor: #fff;
+    --navHoverOpacity: 0.6;
+    --footerColor: #fff;
+    --cardBorderColor: #0f395e;
+    --cardBackground: #0c2e4e;
+    --subcardBackground: #1f4468;
+    --stripeBackground: #fff
+}
+
+.theme--LegacyDark.accent--Slate,
+.theme--LegacyDark.flavor--Slate.accent--Slate {
+    --accentColor: #fff;
+    --linkHoverOpacity: 0.6;
+    --buttonHoverOpacity: 0.6
+}
+
+
+
+.flavor--Chroma {
+    --blendBackground: #80e9ff;
+    --blendIntersection: #0048e5;
+    --blendForeground: #7a73ff;
+    --gradientColorZero: #a960ee;
+    --gradientColorOne: #ff333d;
+    --gradientColorTwo: #90e0ff;
+    --gradientColorThree: #ffcb57;
+    --gradientColorZeroTransparent: rgba(169, 96, 238, 0);
+    --gradientColorOneTransparent: rgba(255, 51, 61, 0);
+    --gradientColorTwoTransparent: rgba(144, 224, 255, 0);
+    --gradientColorThreeTransparent: rgba(255, 203, 87, 0);
+    --shadeOneColor: #02bcf5;
+    --shadeTwoColor: #0073e6;
+    --shadeThreeColor: #003ab9;
+    --shadeFourColor: #635bff;
+    --shadeFiveColor: #002c59;
+    --shadeSixColor: #09cbcb
+}
+
+.flavor--Chroma.theme--Dark,
+.flavor--Chroma .theme--Dark {
+    --blendForeground: #7a73ff;
+    --blendIntersection: #cff;
+    --blendBackground: #00d4ff
+}
+
+.flavor--Chroma.accent--Cyan,
+.flavor--Chroma .accent--Cyan {
+    --accentColor: #02bcf5
+}
+
+.flavor--Chroma.theme--Dark.accent--Cyan,
+.flavor--Chroma.theme--Dark .accent--Cyan,
+.flavor--Chroma .theme--Dark.accent--Cyan {
+    --accentColor: #00d4ff
+}
+
+.flavor--Chroma.accent--Blurple,
+.flavor--Chroma .accent--Blurple {
+    --accentColor: #635bff
+}
+
+.flavor--Chroma.theme--Dark.accent--Blurple,
+.flavor--Chroma.theme--Dark .accent--Blurple {
+    --accentColor: #7a73ff
+}
+
+.flavor--Chroma.accent--Blue,
+.flavor--Chroma .accent--Blue {
+    --accentColor: #0073e6
+}
+
+.flavor--Chroma.accent--Slate,
+.flavor--Chroma .accent--Slate {
+    --accentColor: #0a2540
+}
+
+.flavor--CottonCandy {
+    --blendBackground: #ff80ff;
+    --blendIntersection: #003dc1;
+    --blendForeground: #0073e6
+}
+
+.flavor--CottonCandy.theme--Dark {
+    --blendBackground: #0073e6;
+    --blendIntersection: #fac7ff;
+    --blendForeground: #ff80ff
+}
+
+.flavor--CottonCandy.accent--Pink,
+.flavor--CottonCandy .accent--Pink {
+    --accentColor: #f363f3
+}
+
+.flavor--CottonCandy.theme--Dark.accent--Pink,
+.flavor--CottonCandy.theme--Dark .accent--Pink {
+    --accentColor: #ff83ff
+}
+
+.flavor--CottonCandy.accent--Cyan,
+.flavor--CottonCandy .accent--Cyan {
+    --accentColor: #02bcf5
+}
+
+.flavor--CottonCandy.theme--Dark.accent--Cyan,
+.flavor--CottonCandy.theme--Dark .accent--Cyan {
+    --accentColor: #09d6ff
+}
+
+.flavor--LemonLime {
+    --blendBackground: #ffd848;
+    --blendIntersection: #00a600;
+    --blendForeground: #00d924;
+    --gradientColorZero: #1dcb5d;
+    --gradientColorOne: #ffa832;
+    --gradientColorTwo: #ffa832;
+    --gradientColorThree: #ffe85e;
+    --gradientColorZeroTransparent: rgba(29, 203, 93, 0);
+    --gradientColorOneTransparent: rgba(255, 168, 50, 0);
+    --gradientColorTwoTransparent: rgba(255, 168, 50, 0);
+    --gradientColorThreeTransparent: rgba(255, 232, 94, 0)
+}
+
+.flavor--LemonLime.theme--Dark {
+    --blendBackground: #00d924;
+    --blendIntersection: #fff5ad;
+    --blendForeground: #ffd848
+}
+
+.flavor--LemonLime.accent--Green,
+.flavor--LemonLime .accent--Green {
+    --accentColor: #15be53;
+    --complimentaryColor: #fab000
+}
+
+.flavor--LemonLime.theme--Dark.accent--Green,
+.flavor--LemonLime.theme--Dark .accent--Green {
+    --accentColor: #14d433
+}
+
+.flavor--LemonLime.accent--Yellow,
+.flavor--LemonLime .accent--Yellow {
+    --accentColor: #eea800;
+    --complimentaryColor: #15be53
+}
+
+.flavor--LemonLime.theme--Dark.accent--Yellow,
+.flavor--LemonLime.theme--Dark .accent--Yellow,
+.flavor--LemonLime .theme--Dark.accent--Yellow {
+    --accentColor: #ffce48
+}
+
+.flavor--Overcast {
+    --blendIntersection: #00299c;
+    --gradientColorZero: #0073e6;
+    --gradientColorOne: #00a8ff;
+    --gradientColorTwo: #021b9c;
+    --gradientColorThree: #11efe3;
+    --gradientColorZeroTransparent: rgba(0, 115, 230, 0);
+    --gradientColorOneTransparent: rgba(0, 168, 255, 0);
+    --gradientColorTwoTransparent: rgba(2, 27, 156, 0);
+    --gradientColorThreeTransparent: rgba(47, 229, 229, 0);
+    --shadeOneColor: #009deb;
+    --shadeTwoColor: #0073e6;
+    --shadeThreeColor: #003f7f;
+    --shadeFourColor: #002c59
+}
+
+.flavor--Overcast,
+.flavor--Overcast.theme--Dark {
+    --blendBackground: #11efe3;
+    --blendForeground: #0073e6
+}
+
+.flavor--Overcast.theme--Dark {
+    --blendIntersection: #b3ffff
+}
+
+.flavor--Overcast.accent--Blue,
+.flavor--Overcast .accent--Blue {
+    --accentColor: #0073e6
+}
+
+.flavor--Overcast.accent--Cyan,
+.flavor--Overcast .accent--Cyan,
+.flavor--Overcast.theme--Dark.accent--Cyan,
+.flavor--Overcast.theme--Dark .accent--Cyan {
+    --accentColor: #02bcf5
+}
+
+.flavor--Overcast.accent--Teal,
+.flavor--Overcast .accent--Teal {
+    --accentColor: #00c4c4
+}
+
+.flavor--Overcast.theme--Dark.accent--Teal,
+.flavor--Overcast.theme--Dark .accent--Teal {
+    --accentColor: #0de4e4
+}
+
+.flavor--Pomegranate {
+    --blendBackground: #ff5996;
+    --blendIntersection: #6e00f5;
+    --blendForeground: #96f;
+    --gradientColorZero: #a54ddd;
+    --gradientColorOne: #ff80ff;
+    --gradientColorTwo: #ffb422;
+    --gradientColorThree: #fe94d4;
+    --gradientColorZeroTransparent: rgba(255, 89, 150, 0);
+    --gradientColorOneTransparent: rgba(255, 128, 255, 0);
+    --gradientColorTwoTransparent: rgba(255, 180, 34, 0);
+    --gradientColorThreeTransparent: rgba(254, 148, 212, 0)
+}
+
+.flavor--Pomegranate.theme--Dark {
+    --blendBackground: #ff5996;
+    --blendIntersection: #ffdcf2;
+    --blendForeground: #96f;
+    --accentColor: #ff5996
+}
+
+.flavor--Pomegranate.accent--Raspberry,
+.flavor--Pomegranate .accent--Raspberry {
+    --accentColor: #ff5996
+}
+
+.flavor--Pomegranate.accent--Purple,
+.flavor--Pomegranate .accent--Purple {
+    --accentColor: #96f
+}
+
+.flavor--Slate {
+    --blendBackground: #a4bdd2;
+    --blendIntersection: #415465;
+    --blendForeground: #657d92
+}
+
+.flavor--Slate.theme--Dark {
+    --blendBackground: #b4d2eb;
+    --blendIntersection: #ecf6ff;
+    --blendForeground: #7995ac
+}
+
+.flavor--Slate.accent--Slate,
+.flavor--Slate .accent--Slate {
+    --accentColor: #657d92
+}
+
+.flavor--Slate.theme--Dark.accent--Slate,
+.flavor--Slate.theme--Dark .accent--Slate {
+    --accentColor: #b4d2eb
+}
+
+.flavor--Sunburst {
+    --blendBackground: #ffd848;
+    --blendIntersection: #ff7600;
+    --blendForeground: #fb0
+}
+
+.flavor--Sunburst.theme--Dark {
+    --blendBackground: #f70;
+    --blendIntersection: #ffea9e;
+    --blendForeground: #fb0
+}
+
+.flavor--Sunburst.accent--Yellow,
+.flavor--Sunburst .accent--Yellow {
+    --accentColor: #fab000
+}
+
+.flavor--Sunburst.theme--Dark.accent--Yellow,
+.flavor--Sunburst.theme--Dark .accent--Yellow {
+    --accentColor: #ffce48
+}
+
+.flavor--Sunburst.accent--Orange,
+.flavor--Sunburst .accent--Orange {
+    --accentColor: #ff7600
+}
+
+.flavor--Sunburst.theme--Dark.accent--Orange,
+.flavor--Sunburst.theme--Dark .accent--Orange {
+    --accentColor: #ff7c0c
+}
+
+.flavor--Sunset {
+    --blendBackground: #fb0;
+    --blendIntersection: #ad4ffb;
+    --blendForeground: #ff80ff
+}
+
+.flavor--Sunset.theme--Dark {
+    --blendBackground: #ff80ff;
+    --blendIntersection: #ffeeb2;
+    --blendForeground: #fb0
+}
+
+.flavor--Sunset.accent--Pink,
+.flavor--Sunset .accent--Pink {
+    --accentColor: #f363f3
+}
+
+.flavor--Sunset.theme--Dark.accent--Pink,
+.flavor--Sunset.theme--Dark .accent--Pink {
+    --accentColor: #ff83ff
+}
+
+.flavor--Sunset.accent--Yellow,
+.flavor--Sunset .accent--Yellow {
+    --accentColor: #fab000
+}
+
+.flavor--Sunset.theme--Dark.accent--Yellow,
+.flavor--Sunset.theme--Dark .accent--Yellow {
+    --accentColor: #ffce48
+}
+
+.flavor--Twilight {
+    --blendIntersection: #0048e5;
+    --gradientColorZero: #4436ff;
+    --gradientColorOne: #56f;
+    --gradientColorTwo: #d679ff;
+    --gradientColorThree: #11efe3;
+    --gradientColorZeroTransparent: rgba(68, 54, 255, 0);
+    --gradientColorOneTransparent: rgba(85, 102, 255, 0);
+    --gradientColorTwoTransparent: rgba(214, 121, 255, 0);
+    --gradientColorThreeTransparent: rgba(4, 255, 255, 0);
+    --shadeOneColor: #16cbe1;
+    --shadeTwoColor: #20b5e3;
+    --shadeThreeColor: #1086db;
+    --shadeFourColor: #1959e6;
+    --shadeFiveColor: #96f;
+    --shadeSixColor: #002c59;
+    --shadeSevenColor: #00c4c4
+}
+
+.flavor--Twilight,
+.flavor--Twilight.theme--Dark {
+    --blendBackground: #11efe3;
+    --blendForeground: #96f
+}
+
+.flavor--Twilight.theme--Dark {
+    --blendIntersection: #c2ffff
+}
+
+.flavor--Twilight.accent--Purple,
+.flavor--Twilight .accent--Purple {
+    --accentColor: #96f
+}
+
+.flavor--Twilight.accent--Teal,
+.flavor--Twilight .accent--Teal {
+    --accentColor: #00c4c4
+}
+
+.flavor--Twilight.theme--Dark.accent--Teal,
+.flavor--Twilight.theme--Dark .accent--Teal,
+.flavor--Twilight .theme--Dark.accent--Teal {
+    --accentColor: #0de4e4
+}
+
+.flavor--Wintergreen {
+    --blendBackground: #1df5e9;
+    --blendIntersection: #00a600;
+    --blendForeground: #00d924;
+    --gradientColorZero: #20d261;
+    --gradientColorOne: #1df5e9;
+    --gradientColorTwo: #00ff91;
+    --gradientColorThree: #1df5e9;
+    --gradientColorZeroTransparent: rgba(68, 54, 255, 0);
+    --gradientColorOneTransparent: rgba(85, 102, 255, 0);
+    --gradientColorTwoTransparent: rgba(214, 121, 255, 0);
+    --gradientColorThreeTransparent: rgba(4, 255, 255, 0);
+    --shadeOneColor: #16cbe1;
+    --shadeTwoColor: #20b5e3;
+    --shadeThreeColor: #1086db;
+    --shadeFourColor: #1959e6;
+    --shadeFiveColor: #96f;
+    --shadeSixColor: #002c59;
+    --shadeSevenColor: #00c4c4
+}
+
+.flavor--Wintergreen.theme--Dark {
+    --blendBackground: #00d924;
+    --blendIntersection: #cbffef;
+    --blendForeground: #1df5e9
+}
+
+.flavor--Wintergreen.accent--Green,
+.flavor--Wintergreen .accent--Green {
+    --accentColor: #15be53
+}
+
+.flavor--Wintergreen.theme--Dark.accent--Green,
+.flavor--Wintergreen.theme--Dark .accent--Green {
+    --accentColor: #14d433
+}
+
+.flavor--Wintergreen.accent--Teal,
+.flavor--Wintergreen .accent--Teal {
+    --accentColor: #00c4c4
+}
+
+.flavor--Wintergreen.accent--Teal .theme--Dark,
+.flavor--Wintergreen.theme--Dark.accent--Teal,
+.flavor--Wintergreen.theme--Dark .accent--Teal {
+    --accentColor: #0de4e4
+}
+
+

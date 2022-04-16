@@ -108,6 +108,11 @@
 
  }
 
+ .SiteHeader__menuNav {
+     display: none;
+ }
+
+
  .SiteHeaderNav__list {
      display: flex;
  }
@@ -530,6 +535,19 @@
          margin-left: 0;
      }
 
+     .SiteHeader__menuNav {
+         display: block;
+         padding: 36px 0 0 0;
+     }
+
+     .SiteHeader__menuNav>a {
+         vertical-align: middle;
+     }
+
+
+     .SiteHeaderNav {
+         display: none;
+     }
 
 
  }
