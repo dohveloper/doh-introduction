@@ -499,16 +499,31 @@ a {
 .Contact {
     display: flex;
     align-items: center;
-    justify-content: center;
     background-color: #ffffff;
 }
 
-.ContactHeader {
+.ContactContent {
+    display: flex;
+    align-items: center;
+}
+
+.Contact__info {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+}
+
+.Contact__comment {
+    flex: 1;
+    padding: 32px;
+}
+
+.ContactText__header {
     font-size: var(--font-size-xl);
     font-weight: 600;
 }
 
-.Contact__email {
+.ContactText__email {
     margin-top: 40px;
     font-size: var(--font-size-s);
     font-weight: 400;
@@ -622,6 +637,19 @@ a {
 
     }
 
+    .ContactContent {
+        flex-direction: column;
+
+
+    }
+
+    .Contact__comment {
+        width: 60%;
+        padding: 0;
+        margin-top: 56px;
+    }
+
+
 }
 
 @media screen and (max-width:576px) {
@@ -654,6 +682,12 @@ a {
     .Swtrack {
         height: 160vh;
 
+    }
+
+    .Contact__comment {
+        width: 80%;
+        padding: 0;
+        margin-top: 56px;
     }
 }
 
