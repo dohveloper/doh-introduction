@@ -1,385 +1,455 @@
-:root {
-
-    --color-black-100: rgba(0, 0, 0, 0.16);
-    --color-black-200: rgba(0, 0, 0, 0.24);
-    --color-black-300: rgba(0, 0, 0, 0.32);
-    --color-black-400: rgba(0, 0, 0, 0.58);
-    --color-black-500: rgba(0, 0, 0, 0.72);
-    --color-black-600: black;
-
-    --font-size-s: 1rem;
-    --font-size-m: 1.563rem;
-    --font-size-l: 2.441rem;
-    --font-size-xl: 3.815rem;
-
-}
-
-@font-face {
-    font-family: 'Gmarket Sans';
-    font-style: normal;
-    font-weight: 700;
-    src: local('Gmarket Sans Bold'), local('GmarketSans-Bold'),
-        url('http://script.ebay.co.kr/fonts/GmarketSansBold.woff2') format('woff2'),
-        /* Chrome 26+, Opera 23+, Firefox 39+ */
-        url('http://script.ebay.co.kr/fonts/GmarketSansBold.woff') format('woff');
-    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-
-@font-face {
-    font-family: 'Gmarket Sans';
-    font-style: normal;
-    font-weight: 500;
-    src: local('Gmarket Sans Medium'), local('GmarketSans-Medium'),
-        url('http://script.ebay.co.kr/fonts/GmarketSansMedium.woff2') format('woff2'),
-        /* Chrome 26+, Opera 23+, Firefox 39+ */
-        url('http://script.ebay.co.kr/fonts/GmarketSansMedium.woff') format('woff');
-    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-
-@font-face {
-    font-family: 'Gmarket Sans';
-    font-style: normal;
-    font-weight: 300;
-    src: local('Gmarket Sans Light'), local('GmarketSans-Light'),
-        url('http://script.ebay.co.kr/fonts/GmarketSansLight.woff2') format('woff2'),
-        /* Chrome 26+, Opera 23+, Firefox 39+ */
-        url('http://script.ebay.co.kr/fonts/GmarketSansLight.woff') format('woff');
-    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    font-family: 'Gmarket Sans', sans-serif;
-    scroll-snap-type: y mandatory;
-}
-
-.test-border {
-    border: 1px solid blue;
-}
-
-ul {
-    list-style-type: none;
-}
-
-a {
-    text-decoration: none;
-    color: black;
-}
-
-.SiteContainer {
-    width: 960px;
-    margin: 0 auto;
-}
-
-.SiteHeader {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 24px;
-}
-
-
-.SiteHeader__logo {
-    padding: 32px 16px;
-    font-size: 24px;
-
-}
-
-.SiteHeaderNav__list {
-    display: flex;
-}
-
-.SiteHeaderNavItem {
-    padding: 32px 24px;
-
-}
-
-.SiteHeaderNavItem>a {
-    font-family: 'Inter', sans-serif;
-    font-weight: 500;
-    color: var(--color-black-300);
-    letter-spacing: 1px;
-    font-size: 16px;
-}
-
-.SiteSection {
-    height: 100vh;
-    scroll-snap-align: start;
-}
-
-.SiteSection__header {
-    font-size: var(--font-size-l);
-    padding: 0 0 56px 0;
-}
-
-.SiteSection__header--grey {
-    color: var(--color-black-200);
-}
-
-.SiteSection__label {
-    margin-bottom: 24px;
-    font-weight: 600;
-    font-size: var(--font-size-m);
-
-}
-
-.SiteSection__text {
-    font-size: var(--font-size-s);
-    line-height: calc(var(--font-size-s) * 2);
-    /*adjust line-height difference */
-    margin-top: -4px;
-}
-
-
-
-
-
-
-
-
-.Hero {
-    background: #EAEAEA;
-}
-
-.HeroContent {
-    display: flex;
-    justify-content: space-between;
-    height: calc(100vh - 110px);
-}
-
-.HeroImageSection {
-    flex: 8;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.HeroImageMonitor {
-    margin-left: -120px;
-}
-
-.HeroImageMonitor__frame {
-    width: 480px;
-    z-index: 1;
-    position: relative;
-    transform: rotate(359.6deg);
-
-}
-
-.HeroImageMonitor__content {
-    width: 240px;
-    z-index: 2;
-}
-
-.HeroImageMonitorText {
-    position: absolute;
-    width: 300px;
-    height: 50px;
-    bottom: 16%;
-    left: 120%;
-}
+ .fadein {
+     animation: fadein 1s;
+ }
+
+
+ @keyframes fadein {
+     from {
+         opacity: 0;
+         position: relative;
+         top: 16px;
+
+     }
+
+     to {
+         opacity: 1;
+         position: relative;
+         top: 0px;
+     }
+ }
+
+
+ :root {
+
+     --color-black-100: rgba(0, 0, 0, 0.16);
+     --color-black-200: rgba(0, 0, 0, 0.24);
+     --color-black-300: rgba(0, 0, 0, 0.32);
+     --color-black-400: rgba(0, 0, 0, 0.58);
+     --color-black-500: rgba(0, 0, 0, 0.72);
+     --color-black-600: black;
+
+     --font-size-s: 1rem;
+     --font-size-m: 1.563rem;
+     --font-size-l: 2.441rem;
+     --font-size-xl: 3.815rem;
+
+ }
+
+ @font-face {
+     font-family: 'Gmarket Sans';
+     font-style: normal;
+     font-weight: 700;
+     src: local('Gmarket Sans Bold'), local('GmarketSans-Bold'),
+         url('http://script.ebay.co.kr/fonts/GmarketSansBold.woff2') format('woff2'),
+         /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('http://script.ebay.co.kr/fonts/GmarketSansBold.woff') format('woff');
+     /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+ }
+
+ @font-face {
+     font-family: 'Gmarket Sans';
+     font-style: normal;
+     font-weight: 500;
+     src: local('Gmarket Sans Medium'), local('GmarketSans-Medium'),
+         url('http://script.ebay.co.kr/fonts/GmarketSansMedium.woff2') format('woff2'),
+         /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('http://script.ebay.co.kr/fonts/GmarketSansMedium.woff') format('woff');
+     /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+ }
+
+ @font-face {
+     font-family: 'Gmarket Sans';
+     font-style: normal;
+     font-weight: 300;
+     src: local('Gmarket Sans Light'), local('GmarketSans-Light'),
+         url('http://script.ebay.co.kr/fonts/GmarketSansLight.woff2') format('woff2'),
+         /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('http://script.ebay.co.kr/fonts/GmarketSansLight.woff') format('woff');
+     /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+ }
+
+ * {
+     margin: 0;
+     padding: 0;
+     font-family: 'Gmarket Sans', sans-serif;
+     scroll-snap-type: y mandatory;
+ }
+
+ .test-border {
+     border: 1px solid blue;
+ }
+
+ ul {
+     list-style-type: none;
+ }
+
+ a {
+     text-decoration: none;
+     color: black;
+ }
+
+ .SiteContainer {
+     width: 960px;
+     margin: 0 auto;
+ }
+
+ .SiteHeader {
+     display: flex;
+     justify-content: space-between;
+     padding-top: 24px;
+ }
+
 
-.HeroTextSection {
-    flex: 7;
-    margin-left: 80px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
+ .SiteHeader__logo {
+     padding: 32px 16px;
+     font-size: 24px;
 
-.HeroText__headline {
-    font-size: var(--font-size-xl);
-}
 
-.HeroText__hi {
-    color: var(--color-black-300);
-    margin-bottom: 16px;
-}
-
-.HeroText__description {
-    margin-top: 32px;
-    font-size: var(--font-size-m);
-    font-weight: 400;
-    color: var(--color-black-600);
-    margin-bottom: 80px;
-}
-
-
-/* About Section */
-.About {
-    background-color: #F5F5F5;
-}
-
-.AboutHeader {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    font-size: var(--font-size-l);
-}
-
-.AboutContent {
-    position: relative;
-    height: 100%;
-    top: -100vh;
-}
-
-.AboutContent__list {
-    height: 100%;
-}
-
-.AboutContentListItem {
-    position: relative;
-    top: 20%;
-    left: 100px;
-    width: 100px;
-    height: 100px;
-    background-color: red;
-}
-
-
-
-.Programming {
-    background-color: #F9F9F9;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-}
-
-
-
-.SiteLayoutA {
-    display: flex;
-    margin-top: 64px;
-}
-
-.SiteLayoutA__column1 {
-    flex: 3;
-    font-weight: 600;
-    font-size: var(--font-size-m);
-
-}
-
-.SiteLayoutA__column2 {
-    flex: 6;
-
-}
-
-
-.ProgrammingHeader__about {
-    color: var(--color-black-200);
-}
-
-.ProgrammingImage {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-
-
-}
-
-.ProgrammingInterest {
-    display: flex;
-    align-items: center;
-}
-
-.ProgrammingInterestItem {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.ProgrammingInterest__divider {
-    width: 2px;
-    height: 80%;
-    background-color: var(--color-black-100);
-    margin: 0 32px;
-}
-
-.ProgrammingInterestItem__images {
-    margin: 0 auto;
-    text-align: center;
-}
-
-.ProgrammingInterestItem__image {
-    width: 64px;
-    height: 64px;
-    object-fit: scale-down;
-    padding: 4px;
-}
-
-.ProgrammingInterestItem__label {
-    margin: 24px 0;
-    font-weight: 400;
-    color: var(--color-black-600);
-}
-
-
-/* Swtrack Section */
-.Swtrack {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    flex-direction: column;
-}
-
-.SwtrackHeader {
-    font-size: var(--font-size-l);
-    padding: 0 0 64px 0;
-
-}
-
-.SwtrackHeader__about {
-    display: inline-block;
-    margin-bottom: 16px;
-}
-
-.SwtrackImage {
-    width: 200px;
-    margin: -20px;
-    /* image adjustment */
-}
-
-.SwtrackContent {
-    display: flex;
-
-}
-
-.SwtrackImageSection {
-    flex: 1;
-}
-
-.SwtrackTextSection {
-    flex: 3;
-    margin-left: 80px;
-    margin-top: 24px;
-}
-
-.SwtrackTextItem {
-    margin-bottom: 40px;
-}
-
-/* Contact Section */
-.Contact {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #EAEAEA;
-}
-
-.ContactHeader {
-    font-size: var(--font-size-xl);
-    font-weight: 600;
-}
-
-.Contact__email {
-    margin-top: 40px;
-    font-size: var(--font-size-s);
-    font-weight: 400;
-    color: var(--color-black-300);
-    margin-left: -60px;
-}
+ }
+
+ .SiteHeaderNav__list {
+     display: flex;
+ }
+
+ .SiteHeaderNavItem {
+     padding: 32px 24px;
+
+ }
+
+ .SiteHeaderNavItem>a {
+     font-family: 'Inter', sans-serif;
+     font-weight: 500;
+     color: var(--color-black-300);
+     letter-spacing: 1px;
+     font-size: 16px;
+ }
+
+ .SiteSection {
+     height: 100vh;
+     scroll-snap-align: start;
+ }
+
+ .SiteSection__header {
+     font-size: var(--font-size-l);
+     padding: 0 0 56px 0;
+ }
+
+ .SiteSection__header--grey {
+     color: var(--color-black-200);
+ }
+
+ .SiteSection__label {
+     margin-bottom: 24px;
+     font-weight: 600;
+     font-size: var(--font-size-m);
+
+ }
+
+ .SiteSection__text {
+     font-size: var(--font-size-s);
+     line-height: calc(var(--font-size-s) * 2);
+     /*adjust line-height difference */
+     margin-top: -4px;
+ }
+
+
+
+
+
+
+
+
+ .Hero {
+     background: #EAEAEA;
+ }
+
+ .HeroContent {
+     display: flex;
+     justify-content: space-between;
+     height: calc(100vh - 110px);
+ }
+
+ .HeroImageSection {
+     flex: 8;
+     height: 100%;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+ }
+
+ .HeroImageMonitor {
+     margin-left: -120px;
+ }
+
+ .HeroImageMonitor__frame {
+     width: 480px;
+     z-index: 1;
+     position: relative;
+ }
+
+ .HeroImageMonitor__content {
+     width: 240px;
+     z-index: 2;
+ }
+
+ .HeroImageMonitorText {
+     position: absolute;
+     width: 300px;
+     height: 50px;
+     bottom: 16%;
+     left: 120%;
+ }
+
+ .HeroTextSection {
+     flex: 7;
+     margin-left: 80px;
+     height: 100%;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+ }
+
+ .HeroText__headline {
+     font-size: var(--font-size-xl);
+ }
+
+ .HeroText__hi {
+     color: var(--color-black-300);
+     margin-bottom: 16px;
+ }
+
+ .HeroText__description {
+     margin-top: 32px;
+     font-size: var(--font-size-m);
+     font-weight: 400;
+     color: var(--color-black-600);
+     margin-bottom: 80px;
+ }
+
+
+ /* About Section */
+ .About {
+     background-color: #F5F5F5;
+
+ }
+
+ .AboutHeader {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     height: 100%;
+     font-size: var(--font-size-l);
+     transition: .3s ease;
+ }
+
+ .AboutContent {
+     position: relative;
+     height: 100%;
+     bottom: 100vh;
+ }
+
+ .AboutContent__list {
+     height: 100%;
+ }
+
+ .AboutContentListItem {
+     position: absolute;
+     top: 20%;
+     left: 100px;
+     font-size: var(--font-size-l);
+     font-weight: 700;
+     color: var(--color-black-100)
+ }
+
+ .AboutContentListItem.item1 {
+     left: 10%;
+     top: 20%;
+ }
+
+ .AboutContentListItem.item2 {
+     left: 80%;
+     top: 60%;
+ }
+
+ .AboutContentListItem.item3 {
+     left: 45%;
+     top: 75%;
+ }
+
+ .AboutContentListItem.item4 {
+     left: 40%;
+     top: 15%;
+ }
+
+ .AboutContentListItem.item5 {
+     left: 60%;
+     top: 20%;
+ }
+
+ .AboutContentListItem.item6 {
+     left: 70%;
+     top: 80%;
+ }
+
+ .AboutContentListItem.item7 {
+     left: 15%;
+     top: 80%;
+ }
+
+ .AboutContentListItem.item8 {
+     left: 85%;
+     top: 30%;
+ }
+
+ .AboutContentListItem.item9 {
+     left: 20%;
+     top: 50%;
+ }
+
+
+
+ .Programming {
+
+     height: 100vh;
+     display: flex;
+     align-items: center;
+ }
+
+
+
+ .SiteLayoutA {
+     display: flex;
+     margin-top: 64px;
+ }
+
+ .SiteLayoutA__column1 {
+     flex: 3;
+     font-weight: 600;
+     font-size: var(--font-size-m);
+
+ }
+
+ .SiteLayoutA__column2 {
+     flex: 6;
+
+ }
+
+
+ .ProgrammingHeader__about {
+     color: var(--color-black-200);
+ }
+
+ .ProgrammingImage {
+     width: 100%;
+     height: 10vh;
+     object-fit: cover;
+
+
+ }
+
+ .ProgrammingInterest {
+     display: flex;
+     align-items: center;
+ }
+
+ .ProgrammingInterestItem {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+ }
+
+ .ProgrammingInterest__divider {
+     width: 2px;
+     height: 80%;
+     background-color: var(--color-black-100);
+     margin: 0 32px;
+ }
+
+ .ProgrammingInterestItem__images {
+     margin: 0 auto;
+     text-align: center;
+ }
+
+ .ProgrammingInterestItem__image {
+     width: 64px;
+     height: 64px;
+     object-fit: scale-down;
+     padding: 4px;
+ }
+
+ .ProgrammingInterestItem__label {
+     margin: 24px 0;
+     font-weight: 400;
+     color: var(--color-black-600);
+ }
+
+
+ /* Swtrack Section */
+ .Swtrack {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     width: 100%;
+     flex-direction: column;
+     background-color: #EAEAEA;
+
+ }
+
+ .SwtrackHeader {
+     font-size: var(--font-size-l);
+     padding: 0 0 64px 0;
+
+ }
+
+ .SwtrackHeader__about {
+     display: inline-block;
+     margin-bottom: 16px;
+     color: rgb(183, 183, 183);
+ }
+
+ .SwtrackImage {
+     width: 200px;
+     margin: -20px;
+     /* image adjustment */
+ }
+
+ .SwtrackContent {
+     display: flex;
+
+ }
+
+ .SwtrackImageSection {
+     flex: 1;
+ }
+
+ .SwtrackTextSection {
+     flex: 3;
+     margin-left: 80px;
+     margin-top: 24px;
+ }
+
+ .SwtrackTextItem {
+     margin-bottom: 40px;
+ }
+
+ /* Contact Section */
+ .Contact {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     background-color: #ffffff;
+ }
+
+ .ContactHeader {
+     font-size: var(--font-size-xl);
+     font-weight: 600;
+ }
+
+ .Contact__email {
+     margin-top: 40px;
+     font-size: var(--font-size-s);
+     font-weight: 400;
+     color: var(--color-black-300);
+     margin-left: -60px;
+ }

@@ -10,6 +10,7 @@ window.addEventListener("resize", function(event) {
       loadMonitorScreen(0);
 });
  
+// Change Monitor Screen 
 let count = 0;
 setInterval(() => {
     clearMonitorScreen();
@@ -22,7 +23,7 @@ setInterval(() => {
   
 
 function loadMonitorScreen(nthImage) {
-    const SCREEN_WIDTH = 226; 
+    const SCREEN_WIDTH = 224; 
     const SCREEN_HEIGHT = 174;
     const BLANK_SCREEN_WIDTH = 228;  
     const BLANK_SCREEN_HEIGHT = 188;  
@@ -39,41 +40,42 @@ function loadMonitorScreen(nthImage) {
     const monitorEl = document.querySelector(".HeroImageMonitor__frame");
     let monitor_frame = document.createElement("img");
     monitor_frame.className = "frameHa";
-    monitor_frame.src = "img/monitor_blank0" + ".png";
+    monitor_frame.src = "img/monitor_blank" + ".png";
     monitor_frame.style.zIndex = 5;
     monitor_frame.style.width = window.getComputedStyle(monitorEl).width;
-    monitor_frame.style.transform = "rotate(359.6deg)";
-    // /* Get a position of a monitor image */ 
-    
+    // /* Get a position of a monitor image */
     let monitor = monitorEl.getBoundingClientRect();
+    let x = parseFloat(monitor.left) + window.scrollX;
+    let y = parseFloat(monitor.top) + window.scrollY;
     console.log(monitor.left, monitor.top);
-    let x = parseFloat(monitor.left) + window.scrollX+2.4;
-    let y = parseFloat(monitor.top) + window.scrollY+2;
-    placeElement(monitor_frame, x, y);
+    console.log(x, y);    
+    placeElement(monitor_frame,x, y);
     
 
     //add screen content element
-    let screen = document.createElement("img");
-    screen.className = "HeroImageMonitor__content"
-    screen.src = "img/screen/"+`screen_${nthImage}`+".png";
-    screen.style.width = SCREEN_WIDTH + "px";
-    screen.style.height = SCREEN_HEIGHT + "px";
-    screen.style.zIndex = 3;
-    screen.style.borderRadius = "16px";
-    placeElement(screen, pos.x, pos.y);
-    
-    //add screen cover(transparent blank screen) element
-    let blank_screen = document.createElement("img");
-    blank_screen.className = "HeroImageMonitor__blankScreen"
-    blank_screen.src = "img/screen/"+"blank_screen"+".png";
-    blank_screen.style.width = BLANK_SCREEN_WIDTH + "px";
-    blank_screen.style.height = BLANK_SCREEN_HEIGHT + "px";
-    blank_screen.style.opacity = "0.3";
-    blank_screen.style.zIndex = 4;
-    blank_screen.style.transform = "rotate(359deg)";
-    placeElement(blank_screen, pos.x + BLANK_SCREEN_OFFSET_X, pos.y + BLANK_SCREEN_OFFSET_Y);
+    if (document.querySelector(".frameHa")) {
+        
+        let screen = document.createElement("img");
+        screen.className = "HeroImageMonitor__content"
+        screen.src = "img/screen/"+`screen_${nthImage}`+".png";
+        screen.style.width = SCREEN_WIDTH + "px";
+        screen.style.height = SCREEN_HEIGHT + "px";
+        screen.style.zIndex = 3;
+        screen.style.borderRadius = "16px";
+            placeElement(screen, pos.x, pos.y);
     
     
+        //add screen cover(transparent blank screen) element
+        let blank_screen = document.createElement("img");
+        blank_screen.className = "HeroImageMonitor__blankScreen"
+        blank_screen.src = "img/screen/"+"blank_screen"+".png";
+        blank_screen.style.width = BLANK_SCREEN_WIDTH + "px";
+        blank_screen.style.height = BLANK_SCREEN_HEIGHT + "px";
+        blank_screen.style.opacity = "0.3";
+        blank_screen.style.zIndex = 4;
+        placeElement(blank_screen, pos.x + BLANK_SCREEN_OFFSET_X, pos.y + BLANK_SCREEN_OFFSET_Y);
+        
+    }
 }
 
 function clearMonitorScreen() {
