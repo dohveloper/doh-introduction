@@ -120,7 +120,3 @@ function getScreenPosition() {
     let pos = { x: x, y: y };
     return pos;
 };
-
-
-
-
