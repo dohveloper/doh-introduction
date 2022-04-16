@@ -89,7 +89,8 @@
  }
 
  .SiteContainer {
-     width: 960px;
+     max-width: 960px;
+     width: 80%;
      margin: 0 auto;
  }
 
@@ -221,8 +222,8 @@
  .HeroText__description {
      margin-top: 32px;
      font-size: var(--font-size-m);
-     font-weight: 400;
-     color: var(--color-black-600);
+     font-weight: 500;
+     color: var(--color-black-500);
      margin-bottom: 80px;
  }
 
@@ -267,23 +268,23 @@
  }
 
  .AboutContentListItem.item2 {
-     left: 80%;
+     left: 70%;
      top: 60%;
  }
 
  .AboutContentListItem.item3 {
-     left: 45%;
-     top: 75%;
+     left: 35%;
+     top: 80%;
  }
 
  .AboutContentListItem.item4 {
      left: 40%;
-     top: 15%;
+     top: 10%;
  }
 
  .AboutContentListItem.item5 {
      left: 60%;
-     top: 20%;
+     top: 25%;
  }
 
  .AboutContentListItem.item6 {
@@ -293,17 +294,17 @@
 
  .AboutContentListItem.item7 {
      left: 15%;
-     top: 80%;
+     top: 65%;
  }
 
  .AboutContentListItem.item8 {
-     left: 85%;
-     top: 30%;
+     left: 80%;
+     top: 20%;
  }
 
  .AboutContentListItem.item9 {
      left: 20%;
-     top: 50%;
+     top: 35%;
  }
 
 
@@ -381,6 +382,8 @@
      margin: 24px 0;
      font-weight: 400;
      color: var(--color-black-600);
+     text-align: center;
+     line-height: 1.5;
  }
 
 
@@ -392,7 +395,7 @@
      width: 100%;
      flex-direction: column;
      background-color: #EAEAEA;
-
+     color: var(--color-black-500);
  }
 
  .SwtrackHeader {
@@ -452,4 +455,81 @@
      font-weight: 400;
      color: var(--color-black-300);
      margin-left: -60px;
+ }
+
+
+
+ @media screen and (max-width:576px) {}
+
+ @media screen and (max-width:992px) {
+
+
+     .SiteContainer {}
+
+     .HeroContent {
+         flex-direction: column;
+         align-items: center;
+     }
+
+     .HeroImageSection {
+         order: 2;
+     }
+
+     .HeroTextSection {
+         order: 1;
+         margin-left: 0;
+         display: none;
+     }
+
+     .HeroText__headline {
+         font-size: var(--font-size-xl);
+
+     }
+
+     .HeroText__description {
+         margin: 16px 0 0 0;
+         font-size: var(--font-size-m);
+     }
+
+     .HeroImageMonitor {
+         margin-top: -20px;
+         margin-left: -70px;
+
+     }
+
+     .SiteLayoutA {
+         display: flex;
+         margin-top: 64px;
+         flex-direction: column;
+     }
+
+     .SiteLayoutA__column1 {
+         flex: 3;
+         font-weight: 600;
+         font-size: var(--font-size-m);
+         margin-bottom: 24px;
+
+     }
+
+     .SiteLayoutA__column2 {
+         flex: 6;
+
+     }
+
+     .ProgrammingInterestItem__image {
+         width: 32px;
+         height: 32px;
+     }
+
+
+     .SwtrackContent {
+         flex-direction: column;
+     }
+
+     .SwtrackTextSection {
+         margin-left: 0;
+     }
+
+
+
  }
